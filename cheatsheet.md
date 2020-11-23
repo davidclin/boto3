@@ -26,6 +26,9 @@ for i in result:
     print(i)
     
 OUTPUT
+-------------------------------
+List of available service names
+-------------------------------
 accessanalyzer
 acm
 acm-pca
@@ -262,5 +265,18 @@ workmail
 workmailmessageflow
 workspaces
 xray
+-------------------------------
+List of available resources:
+-------------------------------
+cloudformation
+cloudwatch
+dynamodb
+ec2
+glacier
+iam
+opsworks
+s3
+sns
+sqs
 </pre>
 </details>
