@@ -1,8 +1,4 @@
 # How to get list of boto3 services using client
-<pre>
-
-</pre>
-
 <details>
 <summary>List of boto3 service names</summary>
 
