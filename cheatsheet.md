@@ -1,18 +1,18 @@
 # How to get list of boto3 services using client
 <pre>
-import boto3
 
-# aws management console
-session_default_profile = boto3.session.Session(profile_name='default',region_name="us-east-1")
-result = session_default_profile.get_available_services()
-for i in result:
-    print(i)
 </pre>
 
 <details>
 <summary>List of boto3 service names</summary>
 
 <pre>
+import boto3
+session_default_profile = boto3.session.Session(profile_name='default',region_name="us-east-1")
+result = session_default_profile.get_available_services()
+for i in result:
+    print(i)
+    
 accessanalyzer
 acm
 acm-pca
