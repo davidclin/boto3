@@ -1,3 +1,15 @@
+# Architecture
+![Boto3 Architecture](https://github.com/davidclin/boto3/blob/develop/images/boto3_architecture.png)
+<pre>
+Boto3 (Upper layer)
+Session  : AWS management console connection
+Resource : High level object APIs (easier to use but limited services supported)
+Client   : Low  level object APIs (practically all services supported but requires more user handling) 
+
+Botocore
+https://botocore.amazonaws.com/v1/documentation/api/1.10.50/tutorial/index.htm
+</pre>
+
 # How to get list of boto3 services using client
 <details>
 <summary>List of boto3 available service names and resources</summary>
