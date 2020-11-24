@@ -319,20 +319,26 @@ sqs
 
 <pre>
 import boto3
-import json                    <-- Simple use cases
-import pprint                  <-- Nested dicts
-import datetime                <-- Nested dicts
-from dateutil.tz import tzutc  <-- Nested dicts
+import json                                                    # Simple use cases | pip install json
+import pprint                                                  # Nested dicts     | pip install pprint
+from datetime import datetime                                  # Nested dicts     | pip install datetime
+from dateutil.tz import tzutc                                  # Nested dicts     | pip install dateutil
+
+from prettyprinter import cpprint, set_default_style           # Nested dicts     | pip install prettyprinter
+set_default_style('light')
 
 session = boto3.session.Session(profile_name='default')
 
 iam_console = session.client(service_name='iam')
 print(iam_console.list_users())
 
-result = iam_console.list_users()  <-- where result is a nested dictionary
+result = iam_console.list_users()  # where result is a nested dictionary
 
 # For nested dictionaries with datetime
 pprint.pprint(result, width=1)
+
+# Using prettyprint
+cpprint(result)
 
 # For simple dictionaries
 json.dumps(result, indent=1)
