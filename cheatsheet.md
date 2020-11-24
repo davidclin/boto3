@@ -280,3 +280,34 @@ sns
 sqs
 </pre>
 </details>
+
+
+# How to print nested dictionaries that contain datetime
+<details>
+<summary></summary>
+
+<pre>
+import boto3
+import json  <-- Simple use cases
+import pprint                  <-- Nested dicts
+import datetime                <-- Nested dicts
+from dateutil.tz import tzutc  <-- Nested dicts
+
+session = boto3.session.Session(profile_name='default')
+
+iam_console = session.client(service_name='iam')
+print(iam_console.list_users())
+
+result = iam_console.list_users()
+
+nested_dictionary = {YOUR_NESTED_DICTIONARY_GOES_INSIDE_HERE}
+
+# For nested dictionaries with datetime
+pprint.pprint(nested_dictionary, width=1)
+
+# For simple dictionaries
+json.dumps(nested_dictionary, indent=1)
+
+
+</pre>
+</details>
