@@ -1,13 +1,32 @@
 # Architecture
 ![Boto3 Architecture](https://github.com/davidclin/boto3/blob/develop/images/boto3_architecture.png)
+
+# What is Botocore?
 <pre>
-Boto3 (Upper layer)
+From https://botocore.amazonaws.com/v1/documentation/api/1.10.50/tutorial/index.htm:
+
+"The botocore package provides a low-level interface to Amazon services. It is responsible for:
+
+Providing access to all available services
+Providing access to all operations within a service
+Marshaling all parameters for a particular operation in the correct format
+Signing the request with the correct authentication signature
+Receiving the response and returning the data in native Python data structures
+
+botocore does not provide higher-level abstractions on top of these services, operations and responses. 
+That is left to the application layer. 
+The goal of botocore is to handle all of the low-level details of making requests and getting results from a service.
+
+The botocore package is mainly data-driven. Each service has a JSON description which specifies all of the operations the service supports, all of the parameters the operation accepts, all of the documentation related to the service, information about supported regions and endpoints, etc. Because this data can be updated quickly based on the canonical description of these services, it's much easier to keep botocore current."
+</pre>
+
+# What is Boto3?
+<pre>
+Boto3 is the name of the Python SDK for AWS. It allows you to directly create, update, and delete AWS resources from your Python scripts.
+
 Session  : AWS management console connection
 Resource : High level object APIs (easier to use but limited services supported)
 Client   : Low  level object APIs (practically all services supported but requires more user handling) 
-
-Botocore
-https://botocore.amazonaws.com/v1/documentation/api/1.10.50/tutorial/index.htm
 </pre>
 
 # How to get list of boto3 services using client
@@ -321,3 +340,6 @@ json.dumps(result, indent=1)
 
 </pre>
 </details>
+
+# Resources
+[Python, Boto3, and AWS S3: Demystified](https://realpython.com/python-boto3-aws-s3/#:~:text=Boto3%20is%20the%20name%20of,resources%20from%20your%20Python%20scripts.)
