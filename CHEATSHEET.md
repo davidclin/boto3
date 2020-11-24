@@ -320,7 +320,7 @@ sqs
 <pre>
 import boto3
 import json                                                    # Simple use cases | pip install json
-import pprint                                                  # Nested dicts     | pip install pprint
+from pprint import pprint                                      # Nested dicts     | pip install pprint
 from datetime import datetime                                  # Nested dicts     | pip install datetime
 from dateutil.tz import tzutc                                  # Nested dicts     | pip install dateutil
 
@@ -335,7 +335,7 @@ print(iam_console.list_users())
 result = iam_console.list_users()  # where result is a nested dictionary
 
 # For nested dictionaries with datetime
-pprint.pprint(result, width=1)
+pprint(result, width=1)
 
 # Using prettyprint
 cpprint(result)
