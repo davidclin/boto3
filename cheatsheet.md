@@ -288,7 +288,7 @@ sqs
 
 <pre>
 import boto3
-import json  <-- Simple use cases
+import json                    <-- Simple use cases
 import pprint                  <-- Nested dicts
 import datetime                <-- Nested dicts
 from dateutil.tz import tzutc  <-- Nested dicts
