@@ -284,7 +284,7 @@ sqs
 
 # How to print nested dictionaries that contain datetime
 <details>
-<summary></summary>
+<summary>Using pprint / json</summary>
 
 <pre>
 import boto3
