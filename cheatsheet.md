@@ -298,15 +298,13 @@ session = boto3.session.Session(profile_name='default')
 iam_console = session.client(service_name='iam')
 print(iam_console.list_users())
 
-result = iam_console.list_users()
-
-nested_dictionary = {YOUR_NESTED_DICTIONARY_GOES_INSIDE_HERE}
+result = iam_console.list_users()  <-- where result is a nested dictionary
 
 # For nested dictionaries with datetime
-pprint.pprint(nested_dictionary, width=1)
+pprint.pprint(result, width=1)
 
 # For simple dictionaries
-json.dumps(nested_dictionary, indent=1)
+json.dumps(result, indent=1)
 
 
 </pre>
