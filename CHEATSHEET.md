@@ -342,4 +342,4 @@ json.dumps(result, indent=1)
 </details>
 
 # Resources
-[Python, Boto3, and AWS S3: Demystified](https://realpython.com/python-boto3-aws-s3/#:~:text=Boto3%20is%20the%20name%20of,resources%20from%20your%20Python%20scripts.)
+[Python, Boto3, and AWS S3: Demystified](https://realpython.com/python-boto3-aws-s3)
