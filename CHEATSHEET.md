@@ -349,3 +349,4 @@ json.dumps(result, indent=1)
 
 # Resources
 [Python, Boto3, and AWS S3: Demystified](https://realpython.com/python-boto3-aws-s3)
+[botostubs](https://www.awsadvent.com/2018/12/21/code-assistance-for-boto3-always-up-to-date-and-in-any-ide/)
